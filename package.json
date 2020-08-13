@@ -1,0 +1,49 @@
+{
+  "name": "fintech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": " env-cmd -f ./config/dev.env node index.js",
+    "test": "env-cmd -f ./config/test.env jest --watch --runInBand",
+    "dev": "env-cmd -f ./config/dev.env nodemon index.js",
+    "install-client": "cd client && npm install && npm run build",
+    "heroku-postbuild": "npm run install-client && npm run build"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "engines": {
+    "node": "12.x"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.1.1",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "env-cmd": "^10.1.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.3",
+    "express-validator": "^6.5.0",
+    "google-auth-library": "^6.0.2",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.15",
+    "mailgun-js": "^0.22.0",
+    "mongodb": "^3.5.8",
+    "mongoose": "^5.9.17",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "node-fetch": "^2.6.0",
+    "nodemailer": "^6.4.8",
+    "sharp": "^0.25.3",
+    "validator": "^13.0.0"
+  },
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
+  },
+  "proxy": "http:localhost:5000"
+}
