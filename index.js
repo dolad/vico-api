@@ -1,9 +1,7 @@
 const app = require("./app");
 const express = require("express");
 const path = require("path");
-const app2 = express();
-
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 8000;
 
 //__________ listening form the port________
 
