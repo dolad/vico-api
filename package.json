@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": " env-cmd -f ./config/dev.env node index.js",
     "test": "env-cmd -f ./config/test.env jest --watch --runInBand",
     "dev": "env-cmd -f ./config/dev.env nodemon index.js",
     "install-client": "cd client && npm install && npm run build",
