@@ -2,8 +2,10 @@ const app = require("./app");
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const port = process.env.PORT || 8000;
+require("dotenv").config();
 
+const port = process.env.PORT;
+console.log(port);
 //__________ listening form the port________
 
 if (process.env.NODE_ENV === "production") {
