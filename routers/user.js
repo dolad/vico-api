@@ -11,14 +11,14 @@ const {
   deleteUser,
 } = require("../controllers/user");
 
-router.get("/api/users/:id", auth, getCurrentUser);
+router.get("/users/:id", auth, getCurrentUser);
 
-router.get("/api/welcome", (req, res) => {
+router.get("/welcome", (req, res) => {
   res.send("welcome");
 });
 
-router.patch("/api/users/update", auth, updateUser);
-router.put("/api/admin/update", auth, isAdmin, updateUser);
+router.patch("/users/update", auth, updateUser);
+router.put("/admin/update", auth, isAdmin, updateUser);
 
 // const avatar = multer({
 //   limits: {

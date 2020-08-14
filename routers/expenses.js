@@ -10,16 +10,16 @@ const {
   deleteExpenses,
 } = require("../controllers/expenses");
 
-router.post("/api/expenses", auth, createExpenses);
+router.post("/expenses", auth, createExpenses);
 
 // with filtering GET /task?completed=true
 
-router.get("/api/expenses", auth, getAllExpenses);
+router.get("/expenses", auth, getAllExpenses);
 
-router.get("/api/expenses/:id", auth, getExpensesById);
+router.get("/expenses/:id", auth, getExpensesById);
 
-router.patch("/api/expenses/:id", auth, updateExpenses);
+router.patch("/expenses/:id", auth, updateExpenses);
 
-router.delete("/api/expenses/:id", auth, deleteExpenses);
+router.delete("/expenses/:id", auth, deleteExpenses);
 
 module.exports = router;

@@ -15,12 +15,12 @@ router.post("/services", auth, createServices);
 
 // with filtering GET /task?completed=true
 
-router.get("/api/services", auth, getAllServices);
+router.get("/services", auth, getAllServices);
 
-router.get("/api/services/:id", auth, getServicesById);
+router.get("/services/:id", auth, getServicesById);
 
-router.patch("/api/services/:id", auth, updateServices);
+router.patch("/services/:id", auth, updateServices);
 
-router.delete("/api/services/:id", auth, deleteServices);
+router.delete("/services/:id", auth, deleteServices);
 
 module.exports = router;

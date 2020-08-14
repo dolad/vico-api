@@ -21,26 +21,26 @@ const {
 
 const { runValidation } = require("../helper/validation");
 
-router.post("/api/signup", userSignupValidator, runValidation, signup);
-router.post("/api/account-activation", accountActivation);
-router.post("/api/signin", userSigninValidator, runValidation, signin);
+router.post("/signup", userSignupValidator, runValidation, signup);
+router.post("/account-activation", accountActivation);
+router.post("/signin", userSigninValidator, runValidation, signin);
 
 router.put(
-  "api/forgot-password",
+  "/forgot-password",
   forgotPasswordValidator,
   runValidation,
   forgotPassword
 );
 router.put(
-  "api/reset-password",
+  "/reset-password",
   resetPasswordValidator,
   runValidation,
   resetPassword
 );
 
-router.post("api/google-login", googleLogin);
+router.post("/google-login", googleLogin);
 
-router.post("api/facebook-login", facebookLogin);
+router.post("/facebook-login", facebookLogin);
 
 // router.post("/users/login", loginUser);
 

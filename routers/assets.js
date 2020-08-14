@@ -10,20 +10,20 @@ const {
   deleteAssets,
 } = require("../controllers/assets");
 
-router.post("/api/assets", auth, createAsset);
+router.post("/assets", auth, createAsset);
 
 // with filtering GET /task?completed=true
 
-router.get("/api/assets", auth, getAssets);
+router.get("/assets", auth, getAssets);
 
 // get by id
 
-router.get("/api/assets/:id", auth, getAssetById);
+router.get("/assets/:id", auth, getAssetById);
 
 // update assetby id
 
-router.patch("/api/assets/:id", auth, updateAssets);
+router.patch("/assets/:id", auth, updateAssets);
 
-router.delete("/api/assets/:id", auth, deleteAssets);
+router.delete("/assets/:id", auth, deleteAssets);
 
 module.exports = router;
