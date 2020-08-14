@@ -17,10 +17,10 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
-app.use(AuthRouter);
-app.use(userRouter);
-app.use(expenseRouter);
-app.use(serviceRouter);
-app.use(assetRouter);
+app.use("/api", AuthRouter);
+app.use("/api", userRouter);
+app.use("/api", expenseRouter);
+app.use("/api", serviceRouter);
+app.use("/api", assetRouter);
 
 module.exports = app;
