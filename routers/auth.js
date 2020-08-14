@@ -23,7 +23,7 @@ const { runValidation } = require("../helper/validation");
 
 router.post("/api/signup", userSignupValidator, runValidation, signup);
 router.post("/api/account-activation", accountActivation);
-router.post("api/signin", userSigninValidator, runValidation, signin);
+router.post("/api/signin", userSigninValidator, runValidation, signin);
 
 router.put(
   "api/forgot-password",
