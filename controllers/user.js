@@ -6,7 +6,6 @@ const { errMessage, successMessage } = require("../helper/resmessage");
 const getCurrentUser = async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
-
     if (!user) {
       throw new Error("user not found");
     }
