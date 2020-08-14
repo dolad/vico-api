@@ -1,8 +1,6 @@
 const app = require("./app");
-const express = require("express");
-const path = require("path");
 const cors = require("cors");
-require("dotenv").config();
+const displayRoutes = require("express-routemap");
 
 const port = process.env.PORT;
 console.log(port);
@@ -18,4 +16,5 @@ if ((process.env.NODE_ENV = "development")) {
 
 app.listen(port, () => {
   console.log("app is running on port : " + port);
+  displayRoutes(app);
 });
